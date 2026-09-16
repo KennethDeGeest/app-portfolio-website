@@ -127,12 +127,18 @@ document.querySelectorAll("[data-app]").forEach(button => {
   button.addEventListener("click", () => openApp(button.dataset.app));
 });
 
+function parseLegalHash() {
+  const match = location.hash.slice(1).match(/^([^/]+)\/(privacy|terms)$/);
+  if (!match || !(match[1] in apps)) return null;
+  return { appId: match[1], type: match[2] };
+}
+
 function closeDialog() {
   dialog.close();
   appCaseView.hidden = false;
   legalView.hidden = true;
   legalDocument.replaceChildren();
-  if (location.hash.slice(1) in apps) history.replaceState(null, "", location.pathname + location.search);
+  if (location.hash.slice(1) in apps || parseLegalHash()) history.replaceState(null, "", location.pathname + location.search);
 }
 
 closeButton.addEventListener("click", closeDialog);
@@ -144,7 +150,7 @@ dialog.addEventListener("cancel", event => {
   closeDialog();
 });
 
-async function showLegal(type) {
+async function showLegal(type, updateHash = true) {
   const app = apps[currentAppId];
   if (!app) return;
   const source = type === "privacy" ? app.privacy : app.terms;
@@ -152,6 +158,7 @@ async function showLegal(type) {
   legalView.hidden = false;
   legalDocument.innerHTML = '<p class="legal-loading">Loading document…</p>';
   dialog.scrollTop = 0;
+  if (updateHash) history.replaceState(null, "", `#${currentAppId}/${type}`);
 
   try {
     const response = await fetch(source);
@@ -178,6 +185,7 @@ legalBack.addEventListener("click", () => {
   legalView.hidden = true;
   appCaseView.hidden = false;
   dialog.scrollTop = 0;
+  history.replaceState(null, "", `#${currentAppId}`);
 });
 
 function closeContactDialog() {
@@ -201,4 +209,10 @@ contactDialog.addEventListener("cancel", event => {
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 const initialApp = location.hash.slice(1);
-if (initialApp in apps) openApp(initialApp, false);
+const initialLegal = parseLegalHash();
+if (initialLegal) {
+  openApp(initialLegal.appId, false);
+  showLegal(initialLegal.type, false);
+} else if (initialApp in apps) {
+  openApp(initialApp, false);
+}
