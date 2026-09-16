@@ -1,6 +1,8 @@
 :root { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #171719; background: #f7f7f5; font-synthesis: none; }
 * { box-sizing: border-box; }
 body { margin: 0; }
+.standalone-nav { width: min(48rem, calc(100% - 2.5rem)); margin: 0 auto; padding-top: 1.35rem; }
+.standalone-nav a { color: #626268; font-size: .9rem; font-weight: 650; text-decoration: none; }
 main { width: min(48rem, calc(100% - 2.5rem)); margin: 0 auto; padding: 2rem 0 7rem; }
 a { color: inherit; }
 .back { display: inline-flex; padding: .65rem 0; color: #626268; font-size: .9rem; font-weight: 650; text-decoration: none; }
@@ -14,7 +16,7 @@ section { margin-top: 3rem; }
 h2 { margin: 0 0 .8rem; font-size: 1.25rem; letter-spacing: -.02em; }
 p, li { color: #57575d; font-size: 1rem; line-height: 1.75; }
 p { margin: .7rem 0; }
-.policy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 1.4rem; }
+.policy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; margin-top: 1.4rem; }
 .policy-card { display: flex; min-height: 8.5rem; flex-direction: column; justify-content: space-between; padding: 1.15rem; border: 1px solid #deded9; border-radius: 1rem; background: #fff; text-decoration: none; transition: transform .18s ease, border-color .18s ease; }
 .policy-card:hover { transform: translateY(-2px); border-color: #a7a7a1; }
 .policy-card:focus-visible { outline: 2px solid #171719; outline-offset: 3px; }

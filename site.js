@@ -67,6 +67,29 @@ const apps = {
     privacy: "apps/migraloom/privacy.html",
     terms: "apps/migraloom/terms.html",
     support: "mailto:degeestkenneth@gmail.com?subject=MigraLoom%20Support"
+  },
+  bumpecho: {
+    title: "Bump Echo",
+    kicker: "Pregnancy audio keepsakes",
+    description: "A private Soundbook for capturing messages, songs, voices, and quiet moments throughout pregnancy.",
+    ideaTitle: "Keep the sounds of this chapter.",
+    idea: "Pregnancy is filled with small moments that photographs cannot hold. Bump Echo gives expecting families a gentle place to record those voices and sounds, add the story behind them, and replay the memories later.",
+    features: [
+      ["Capture a meaningful moment", "Record a message, song, loved one’s voice, or ordinary sound with the iPhone microphone."],
+      ["Build a private Soundbook", "Add titles and notes, favorite special recordings, search the collection, and replay memories anytime."],
+      ["Share only when you choose", "Recordings stay on the device unless the user deliberately exports one through the iOS share sheet."]
+    ],
+    screenshots: [
+      ["assets/screens/bumpecho-home.png", "Bump Echo family Soundbook home"],
+      ["assets/screens/bumpecho-soundbook.png", "Bump Echo populated audio memory collection"],
+      ["assets/screens/bumpecho-settings.png", "Bump Echo family and privacy settings"]
+    ],
+    note: "An audio keepsake—not a fetal-heartbeat recorder or medical monitor. Recordings and personal notes stay on the user’s iPhone.",
+    icon: "assets/bumpecho.png",
+    store: null,
+    privacy: "apps/bumpecho/privacy.html",
+    terms: "apps/bumpecho/terms.html",
+    support: "mailto:degeestkenneth@gmail.com?subject=Bump%20Echo%20Support"
   }
 };
 
@@ -115,7 +138,9 @@ function openApp(id, updateHash = true) {
     figure.append(image);
     return figure;
   }));
-  document.querySelector("#dialog-store").href = app.store;
+  const storeLink = document.querySelector("#dialog-store");
+  storeLink.hidden = !app.store;
+  if (app.store) storeLink.href = app.store;
   document.querySelector("#dialog-privacy").href = app.privacy;
   document.querySelector("#dialog-terms").href = app.terms;
   document.querySelector("#dialog-support").href = app.support;
