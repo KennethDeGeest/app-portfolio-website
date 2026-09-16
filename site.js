@@ -2,7 +2,20 @@ const apps = {
   tiphaven: {
     title: "TipHaven",
     kicker: "Tips, shifts & earnings",
-    description: "A private shift tracker for hospitality workers. Log tips, wages, hours, and tip-outs, then see what your time was really worth.",
+    description: "A private shift tracker that turns tips, wages, hours, and tip-outs into a clear picture of what your time is worth.",
+    ideaTitle: "Know which shifts truly pay off.",
+    idea: "Hospitality workers often remember the cash in their pocket, but not the full value of a shift. TipHaven brings every part of the working day together so earnings, patterns, and progress are easy to understand.",
+    features: [
+      ["Capture the full shift", "Log hours, wages, cash and card tips, sales, and tip-outs in one quick flow."],
+      ["See the real hourly value", "Automatically calculate total earnings and effective hourly pay across shifts, roles, and workplaces."],
+      ["Find useful patterns", "Review trends and comparisons without turning personal work records into a public profile."]
+    ],
+    screenshots: [
+      ["assets/screens/tiphaven-today.png", "TipHaven today view with weekly earnings"],
+      ["assets/screens/tiphaven-shift.png", "TipHaven shift entry flow"],
+      ["assets/screens/tiphaven-insights.png", "TipHaven earnings insights"]
+    ],
+    note: "No account required. Shift and earnings details stay on the user’s iPhone.",
     icon: "assets/tiphaven.png",
     store: "https://apps.apple.com/app/id6805177188",
     privacy: "apps/tiphaven/privacy.html",
@@ -12,7 +25,20 @@ const apps = {
   bulkbro: {
     title: "BulkBro",
     kicker: "Adaptive weight-gain coach",
-    description: "An evidence-based calorie and weight coach for hardgainers. BulkBro learns from your meals, weigh-ins, and completed weeks to adapt your target.",
+    description: "An evidence-based calorie and weight coach that helps hardgainers replace guesswork with a plan that adapts to real progress.",
+    ideaTitle: "A bulking plan that learns from results.",
+    idea: "Eating more is simple advice, but knowing whether it is enough is harder. BulkBro connects meal logging, weigh-ins, and completed weeks to explain what is happening and adjust the next target with context.",
+    features: [
+      ["Log without friction", "Capture meals with quick inputs and editable estimates while keeping the final numbers under the user’s control."],
+      ["Adapt from completed weeks", "Compare confirmed intake with weight response and goal pace before suggesting a calorie adjustment."],
+      ["Explain the recommendation", "Show why a target changed—or stayed the same—so the plan remains understandable rather than mysterious."]
+    ],
+    screenshots: [
+      ["assets/screens/bulkbro-today.png", "BulkBro daily calorie plan"],
+      ["assets/screens/bulkbro-log.png", "BulkBro meal logging screen"],
+      ["assets/screens/bulkbro-progress.png", "BulkBro progress and weight trend"]
+    ],
+    note: "Built for intentional weight gain. BulkBro is not medical advice or a replacement for professional care.",
     icon: "assets/bulkbro.png",
     store: "https://apps.apple.com/app/id6770476671",
     privacy: "apps/bulkbro/privacy.html",
@@ -22,7 +48,20 @@ const apps = {
   migraloom: {
     title: "MigraLoom",
     kicker: "Private migraine journal",
-    description: "Capture migraine episodes in seconds, understand patterns in your record, and prepare a clear visit summary for appointments—all without a MigraLoom account.",
+    description: "A calm, private migraine journal for capturing episodes, understanding recorded patterns, and preparing clearer conversations with healthcare professionals.",
+    ideaTitle: "Remember less. Bring a clearer record.",
+    idea: "Migraine days make detailed note-taking difficult, and important context is easy to forget later. MigraLoom makes the first entry fast, then lets users add detail when they are ready and turn the record into something useful.",
+    features: [
+      ["Record an episode quickly", "Start with timing and intensity, then add symptoms, pain location, medication, and notes when it feels manageable."],
+      ["See only recorded patterns", "Summarize frequency, duration, intensity, and recurring context without presenting guesses as medical conclusions."],
+      ["Prepare for appointments", "Create a structured visit summary and export a PDF only when the user chooses to share it." ]
+    ],
+    screenshots: [
+      ["assets/screens/migraloom-home.png", "MigraLoom home and episode overview"],
+      ["assets/screens/migraloom-patterns.png", "MigraLoom recorded patterns"],
+      ["assets/screens/migraloom-visit.png", "MigraLoom visit summary"]
+    ],
+    note: "No MigraLoom account required. Journal and health details remain stored on the user’s iPhone.",
     icon: "assets/migraloom.png",
     store: "https://apps.apple.com/app/id6811065580",
     privacy: "apps/migraloom/privacy.html",
@@ -45,6 +84,28 @@ function openApp(id, updateHash = true) {
   document.querySelector("#dialog-kicker").textContent = app.kicker;
   document.querySelector("#dialog-title").textContent = app.title;
   document.querySelector("#dialog-description").textContent = app.description;
+  document.querySelector("#dialog-idea-title").textContent = app.ideaTitle;
+  document.querySelector("#dialog-idea").textContent = app.idea;
+  document.querySelector("#dialog-note").textContent = app.note;
+  document.querySelector("#dialog-features").replaceChildren(...app.features.map(([title, detail]) => {
+    const item = document.createElement("li");
+    const heading = document.createElement("strong");
+    const text = document.createElement("span");
+    heading.textContent = title;
+    text.textContent = detail;
+    item.append(heading, text);
+    return item;
+  }));
+  document.querySelector("#dialog-screenshots").replaceChildren(...app.screenshots.map(([src, alt]) => {
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    figure.className = "screenshot-card";
+    image.src = src;
+    image.alt = alt;
+    image.loading = "lazy";
+    figure.append(image);
+    return figure;
+  }));
   document.querySelector("#dialog-store").href = app.store;
   document.querySelector("#dialog-privacy").href = app.privacy;
   document.querySelector("#dialog-terms").href = app.terms;

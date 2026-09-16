@@ -58,18 +58,40 @@
   <dialog class="app-dialog" id="app-dialog" aria-labelledby="dialog-title">
     <button class="dialog-close" type="button" aria-label="Close app details">×</button>
     <div class="dialog-content">
-      <img class="dialog-icon" id="dialog-icon" alt="">
-      <p class="dialog-kicker" id="dialog-kicker"></p>
-      <h2 id="dialog-title"></h2>
-      <p class="dialog-description" id="dialog-description"></p>
-      <div class="dialog-actions">
-        <a class="button dark" id="dialog-store" href="#">View on the App Store <span aria-hidden="true">↗</span></a>
+      <header class="app-case-header">
+        <img class="dialog-icon" id="dialog-icon" alt="">
+        <div class="app-case-copy">
+          <p class="dialog-kicker" id="dialog-kicker"></p>
+          <h2 id="dialog-title"></h2>
+          <p class="dialog-description" id="dialog-description"></p>
+          <a class="button dark" id="dialog-store" href="#">View on the App Store <span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+
+      <section class="app-showcase" aria-label="App screenshots">
+        <div class="screenshot-track" id="dialog-screenshots"></div>
+      </section>
+
+      <section class="app-case-details">
+        <div class="app-case-summary">
+          <p class="section-label">The idea</p>
+          <h3 id="dialog-idea-title"></h3>
+          <p id="dialog-idea"></p>
+        </div>
+        <div class="app-case-features">
+          <p class="section-label">What it does</p>
+          <ul id="dialog-features"></ul>
+        </div>
+      </section>
+
+      <div class="app-case-footer">
+        <p id="dialog-note"></p>
+        <nav class="dialog-legal" aria-label="App legal links">
+          <a id="dialog-privacy" href="#">Privacy</a>
+          <a id="dialog-terms" href="#">Terms</a>
+          <a id="dialog-support" href="#">Support</a>
+        </nav>
       </div>
-      <nav class="dialog-legal" aria-label="App legal links">
-        <a id="dialog-privacy" href="#">Privacy Policy</a>
-        <a id="dialog-terms" href="#">Terms of Use</a>
-        <a id="dialog-support" href="#">Support</a>
-      </nav>
     </div>
   </dialog>
 
