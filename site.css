@@ -29,8 +29,9 @@ a { color: inherit; }
   justify-content: space-between;
 }
 .site-header { min-height: 5rem; }
-.wordmark { text-decoration: none; font-size: 1.45rem; font-weight: 900; letter-spacing: -.06em; }
-.wordmark span { font-weight: 400; letter-spacing: -.08em; }
+.wordmark { display: inline-flex; align-items: center; gap: .85rem; text-decoration: none; }
+.wordmark-name { font-size: 1rem; font-weight: 750; letter-spacing: -.035em; text-transform: uppercase; }
+.wordmark-label { border-left: 1px solid #cfd0d2; padding-left: .85rem; color: #77797e; font-size: .68rem; font-weight: 650; letter-spacing: .15em; text-transform: uppercase; }
 .site-header nav, footer nav { display: flex; gap: 2.2rem; }
 .site-header nav a, footer nav a { text-decoration: none; color: #505257; font-size: .98rem; }
 .site-header nav a:hover, footer nav a:hover { color: var(--ink); }
@@ -94,6 +95,9 @@ footer p { margin: 0; }
 
 @media (max-width: 620px) {
   .site-header { padding: 1.25rem; }
+  .wordmark { align-items: flex-start; flex-direction: column; gap: .2rem; }
+  .wordmark-name { font-size: .82rem; }
+  .wordmark-label { border-left: 0; padding-left: 0; font-size: .58rem; }
   .site-header nav { gap: 1.1rem; }
   .site-header nav a { font-size: .9rem; }
   .apps-stage { min-height: 25rem; }
