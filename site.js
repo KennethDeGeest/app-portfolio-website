@@ -33,6 +33,9 @@ const apps = {
 
 const dialog = document.querySelector("#app-dialog");
 const closeButton = dialog.querySelector(".dialog-close");
+const contactDialog = document.querySelector("#contact-dialog");
+const contactTrigger = document.querySelector(".contact-trigger");
+const contactCloseButton = contactDialog.querySelector(".dialog-close");
 
 function openApp(id, updateHash = true) {
   const app = apps[id];
@@ -66,6 +69,20 @@ dialog.addEventListener("click", event => {
 dialog.addEventListener("cancel", event => {
   event.preventDefault();
   closeDialog();
+});
+
+function closeContactDialog() {
+  contactDialog.close();
+}
+
+contactTrigger.addEventListener("click", () => contactDialog.showModal());
+contactCloseButton.addEventListener("click", closeContactDialog);
+contactDialog.addEventListener("click", event => {
+  if (event.target === contactDialog) closeContactDialog();
+});
+contactDialog.addEventListener("cancel", event => {
+  event.preventDefault();
+  closeContactDialog();
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();

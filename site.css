@@ -69,6 +69,7 @@ a { color: inherit; }
 .button { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid #dadbdd; border-radius: .65rem; padding: .9rem 1.15rem; text-decoration: none; background: var(--white); transition: transform .18s, box-shadow .18s; }
 .button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
 .button.dark { background: var(--ink); color: white; border-color: var(--ink); }
+.contact-trigger { color: inherit; font: inherit; cursor: pointer; }
 
 footer { border-top: 1px solid var(--line); min-height: 8rem; color: #595b60; }
 footer p { margin: 0; }
@@ -83,6 +84,29 @@ footer p { margin: 0; }
   background: var(--white);
 }
 .app-dialog::backdrop { background: rgba(12,13,15,.55); backdrop-filter: blur(8px); }
+.contact-dialog {
+  width: min(38rem, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  border: 0;
+  border-radius: 1.5rem;
+  padding: 0;
+  overflow: auto;
+  box-shadow: 0 30px 90px rgba(0,0,0,.24);
+  background: var(--white);
+}
+.contact-dialog::backdrop { background: rgba(12,13,15,.55); backdrop-filter: blur(8px); }
+.contact-dialog-content { padding: 2.8rem; }
+.contact-dialog-content h2 { margin: 0; font-size: clamp(1.65rem, 5vw, 2.15rem); letter-spacing: -.045em; }
+.contact-dialog-intro { margin: .8rem 0 1.8rem; color: var(--muted); line-height: 1.55; }
+.contact-options { display: grid; gap: .65rem; }
+.contact-options a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid var(--line); border-radius: .9rem; padding: 1rem 1.1rem; text-decoration: none; transition: border-color .18s, transform .18s, box-shadow .18s; }
+.contact-options a:hover { border-color: #bbbcc0; transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.05); }
+.contact-options span { display: grid; gap: .2rem; }
+.contact-options strong { font-size: .98rem; }
+.contact-options small { color: var(--muted); font-size: .8rem; line-height: 1.35; }
+.contact-options b { color: #8a8c91; font-weight: 500; }
+.contact-options .hire-option { background: var(--ink); border-color: var(--ink); color: white; }
+.contact-options .hire-option small, .contact-options .hire-option b { color: #bfc0c3; }
 .dialog-content { padding: 3rem; text-align: center; }
 .dialog-close { position: absolute; right: .9rem; top: .9rem; width: 2.25rem; height: 2.25rem; border: 0; border-radius: 50%; background: #f0f0f1; font-size: 1.55rem; line-height: 1; cursor: pointer; color: #4f5155; }
 .dialog-icon { width: 6.5rem; height: 6.5rem; border-radius: 22%; box-shadow: 0 15px 30px rgba(0,0,0,.14); margin-bottom: 1.5rem; }
@@ -103,6 +127,7 @@ footer p { margin: 0; }
   .apps-stage { min-height: 25rem; }
   .app-icon { width: 5rem; height: 5rem; }
   .dialog-content { padding: 2.6rem 1.35rem 1.8rem; }
+  .contact-dialog-content { padding: 2.6rem 1.25rem 1.4rem; }
   footer { align-items: flex-start; gap: 1.5rem; flex-direction: column; padding: 2rem 1.25rem; }
   footer nav { gap: 1.3rem; flex-wrap: wrap; }
 }
