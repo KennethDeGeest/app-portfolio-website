@@ -75,10 +75,18 @@ const closeButton = dialog.querySelector(".dialog-close");
 const contactDialog = document.querySelector("#contact-dialog");
 const contactTrigger = document.querySelector(".contact-trigger");
 const contactCloseButton = contactDialog.querySelector(".dialog-close");
+const appCaseView = document.querySelector("#app-case-view");
+const legalView = document.querySelector("#legal-view");
+const legalDocument = document.querySelector("#legal-document");
+const legalBack = document.querySelector("#legal-back");
+let currentAppId = null;
 
 function openApp(id, updateHash = true) {
   const app = apps[id];
   if (!app) return;
+  currentAppId = id;
+  appCaseView.hidden = false;
+  legalView.hidden = true;
   document.querySelector("#dialog-icon").src = app.icon;
   document.querySelector("#dialog-icon").alt = `${app.title} app icon`;
   document.querySelector("#dialog-kicker").textContent = app.kicker;
@@ -120,6 +128,9 @@ document.querySelectorAll("[data-app]").forEach(button => {
 
 function closeDialog() {
   dialog.close();
+  appCaseView.hidden = false;
+  legalView.hidden = true;
+  legalDocument.replaceChildren();
   if (location.hash.slice(1) in apps) history.replaceState(null, "", location.pathname + location.search);
 }
 
@@ -130,6 +141,42 @@ dialog.addEventListener("click", event => {
 dialog.addEventListener("cancel", event => {
   event.preventDefault();
   closeDialog();
+});
+
+async function showLegal(type) {
+  const app = apps[currentAppId];
+  if (!app) return;
+  const source = type === "privacy" ? app.privacy : app.terms;
+  appCaseView.hidden = true;
+  legalView.hidden = false;
+  legalDocument.innerHTML = '<p class="legal-loading">Loading document…</p>';
+  dialog.scrollTop = 0;
+
+  try {
+    const response = await fetch(source);
+    if (!response.ok) throw new Error("Document unavailable");
+    const html = await response.text();
+    const parsed = new DOMParser().parseFromString(html, "text/html");
+    const content = parsed.querySelector("main");
+    if (!content) throw new Error("Document content unavailable");
+    content.querySelectorAll("nav, footer, script, style").forEach(element => element.remove());
+    legalDocument.replaceChildren(...Array.from(content.childNodes).map(node => node.cloneNode(true)));
+  } catch (error) {
+    legalDocument.innerHTML = "<h1>Document unavailable</h1><p>Please try again after the page has been published.</p>";
+  }
+}
+
+document.querySelectorAll("[data-legal]").forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    showLegal(link.dataset.legal);
+  });
+});
+
+legalBack.addEventListener("click", () => {
+  legalView.hidden = true;
+  appCaseView.hidden = false;
+  dialog.scrollTop = 0;
 });
 
 function closeContactDialog() {

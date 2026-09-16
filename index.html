@@ -58,6 +58,7 @@
   <dialog class="app-dialog" id="app-dialog" aria-labelledby="dialog-title">
     <button class="dialog-close" type="button" aria-label="Close app details">×</button>
     <div class="dialog-content">
+      <div id="app-case-view">
       <header class="app-case-header">
         <img class="dialog-icon" id="dialog-icon" alt="">
         <div class="app-case-copy">
@@ -87,11 +88,17 @@
       <div class="app-case-footer">
         <p id="dialog-note"></p>
         <nav class="dialog-legal" aria-label="App legal links">
-          <a id="dialog-privacy" href="#">Privacy</a>
-          <a id="dialog-terms" href="#">Terms</a>
+          <a id="dialog-privacy" data-legal="privacy" href="#">Privacy</a>
+          <a id="dialog-terms" data-legal="terms" href="#">Terms</a>
           <a id="dialog-support" href="#">Support</a>
         </nav>
       </div>
+      </div>
+
+      <section class="legal-view" id="legal-view" hidden aria-live="polite">
+        <button class="legal-back" id="legal-back" type="button">← Back to app</button>
+        <div class="legal-document" id="legal-document"></div>
+      </section>
     </div>
   </dialog>
 
