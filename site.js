@@ -18,6 +18,16 @@ const apps = {
     privacy: "apps/bulkbro/privacy.html",
     terms: "apps/bulkbro/terms.html",
     support: "mailto:degeestkenneth@gmail.com?subject=BulkBro%20Support"
+  },
+  migraloom: {
+    title: "MigraLoom",
+    kicker: "Private migraine journal",
+    description: "Capture migraine episodes in seconds, understand patterns in your record, and prepare a clear visit summary for appointments—all without a MigraLoom account.",
+    icon: "assets/migraloom.png",
+    store: "https://apps.apple.com/app/id6811065580",
+    privacy: "apps/migraloom/privacy.html",
+    terms: "apps/migraloom/terms.html",
+    support: "mailto:degeestkenneth@gmail.com?subject=MigraLoom%20Support"
   }
 };
 
