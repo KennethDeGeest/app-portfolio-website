@@ -79,6 +79,7 @@ const appCaseView = document.querySelector("#app-case-view");
 const legalView = document.querySelector("#legal-view");
 const legalDocument = document.querySelector("#legal-document");
 const legalBack = document.querySelector("#legal-back");
+const dialogSupport = document.querySelector("#dialog-support");
 let currentAppId = null;
 
 function openApp(id, updateHash = true) {
@@ -184,6 +185,11 @@ function closeContactDialog() {
 }
 
 contactTrigger.addEventListener("click", () => contactDialog.showModal());
+dialogSupport.addEventListener("click", (event) => {
+  event.preventDefault();
+  closeDialog();
+  contactDialog.showModal();
+});
 contactCloseButton.addEventListener("click", closeContactDialog);
 contactDialog.addEventListener("click", event => {
   if (event.target === contactDialog) closeContactDialog();
