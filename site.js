@@ -23,22 +23,22 @@ const apps = {
     support: "mailto:degeestkenneth@gmail.com?subject=TipHaven%20Support"
   },
   bulkbro: {
-    title: "Bulk Tracker",
+    title: "BulkBro",
     kicker: "Adaptive weight-gain coach",
     description: "An evidence-based calorie and weight coach that helps hardgainers replace guesswork with a plan that adapts to real progress.",
     ideaTitle: "A bulking plan that learns from results.",
-    idea: "Eating more is simple advice, but knowing whether it is enough is harder. Bulk Tracker connects meal logging, weigh-ins, and completed weeks to explain what is happening and adjust the next target with context.",
+    idea: "Eating more is simple advice, but knowing whether it is enough is harder. BulkBro connects meal logging, weigh-ins, and completed weeks to explain what is happening and adjust the next target with context.",
     features: [
       ["Log without friction", "Capture meals with quick inputs and editable estimates while keeping the final numbers under the user’s control."],
       ["Adapt from completed weeks", "Compare confirmed intake with weight response and goal pace before suggesting a calorie adjustment."],
       ["Explain the recommendation", "Show why a target changed—or stayed the same—so the plan remains understandable rather than mysterious."]
     ],
     screenshots: [
-      ["assets/screens/bulkbro-today.png", "Bulk Tracker daily calorie plan"],
-      ["assets/screens/bulkbro-log.png", "Bulk Tracker meal logging screen"],
-      ["assets/screens/bulkbro-progress.png", "Bulk Tracker progress and weight trend"]
+      ["assets/screens/bulkbro-today.png", "BulkBro daily calorie plan"],
+      ["assets/screens/bulkbro-log.png", "BulkBro meal logging screen"],
+      ["assets/screens/bulkbro-progress.png", "BulkBro progress and weight trend"]
     ],
-    note: "Built for intentional weight gain. Bulk Tracker is not medical advice or a replacement for professional care.",
+    note: "Built for intentional weight gain. BulkBro is not medical advice or a replacement for professional care.",
     icon: "assets/bulkbro.png",
     store: "https://apps.apple.com/app/id6770476671",
     privacy: "apps/bulkbro/privacy.html",
