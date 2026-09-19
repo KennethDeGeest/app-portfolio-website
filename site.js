@@ -43,6 +43,7 @@ const apps = {
     store: "https://apps.apple.com/app/id6770476671",
     privacy: "apps/bulkbro/privacy.html",
     terms: "apps/bulkbro/terms.html",
+    health: "apps/bulkbro/health.html",
     support: "mailto:degeestkenneth@gmail.com?subject=Bulk%20Tracker%20Support"
   },
   migraloom: {
@@ -143,6 +144,9 @@ function openApp(id, updateHash = true) {
   if (app.store) storeLink.href = app.store;
   document.querySelector("#dialog-privacy").href = app.privacy;
   document.querySelector("#dialog-terms").href = app.terms;
+  const healthLink = document.querySelector("#dialog-health");
+  healthLink.hidden = !app.health;
+  healthLink.href = app.health || "#";
   document.querySelector("#dialog-support").href = app.support;
   if (!dialog.open) dialog.showModal();
   if (updateHash) history.replaceState(null, "", `#${id}`);
@@ -153,7 +157,7 @@ document.querySelectorAll("[data-app]").forEach(button => {
 });
 
 function parseLegalHash() {
-  const match = location.hash.slice(1).match(/^([^/]+)\/(privacy|terms)$/);
+  const match = location.hash.slice(1).match(/^([^/]+)\/(privacy|terms|health)$/);
   if (!match || !(match[1] in apps)) return null;
   return { appId: match[1], type: match[2] };
 }
@@ -178,7 +182,8 @@ dialog.addEventListener("cancel", event => {
 async function showLegal(type, updateHash = true) {
   const app = apps[currentAppId];
   if (!app) return;
-  const source = type === "privacy" ? app.privacy : app.terms;
+  const source = app[type];
+  if (!source) return;
   appCaseView.hidden = true;
   legalView.hidden = false;
   legalDocument.innerHTML = '<p class="legal-loading">Loading document…</p>';
