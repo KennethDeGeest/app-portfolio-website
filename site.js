@@ -23,8 +23,8 @@ const apps = {
     support: "mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%20Support"
   },
   tiphaven: {
-    title: "TipHaven",
-    kicker: "Tips, shifts & earnings",
+    title: "Tip Tracker: TipHaven",
+    kicker: "Server Tip Tracker",
     description: "A private shift tracker that turns tips, wages, hours, and tip-outs into a clear picture of what your time is worth.",
     ideaTitle: "Know which shifts truly pay off.",
     idea: "Hospitality workers often remember the cash in their pocket, but not the full value of a shift. TipHaven brings every part of the working day together so earnings, patterns, and progress are easy to understand.",
@@ -43,35 +43,35 @@ const apps = {
     store: "https://apps.apple.com/app/id6805177188",
     privacy: "apps/tiphaven/privacy.html",
     terms: "apps/tiphaven/terms.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=TipHaven%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=Tip%20Tracker%3A%20TipHaven%20Support"
   },
   bulkbro: {
-    title: "BulkBro",
-    kicker: "Adaptive weight-gain coach",
+    title: "Bulk Tracker: Gain Weight Plan",
+    kicker: "Adaptive Calorie & Macro Goals",
     description: "An evidence-based calorie and weight coach that helps hardgainers replace guesswork with a plan that adapts to real progress.",
     ideaTitle: "A bulking plan that learns from results.",
-    idea: "Eating more is simple advice, but knowing whether it is enough is harder. BulkBro connects meal logging, weigh-ins, and completed weeks to explain what is happening and adjust the next target with context.",
+    idea: "Eating more is simple advice, but knowing whether it is enough is harder. Bulk Tracker connects meal logging, weigh-ins, and completed weeks to explain what is happening and adjust the next target with context.",
     features: [
       ["Log without friction", "Capture meals with quick inputs and editable estimates while keeping the final numbers under the user’s control."],
       ["Adapt from completed weeks", "Compare confirmed intake with weight response and goal pace before suggesting a calorie adjustment."],
       ["Explain the recommendation", "Show why a target changed—or stayed the same—so the plan remains understandable rather than mysterious."]
     ],
     screenshots: [
-      ["assets/screens/bulkbro-today.png", "BulkBro daily calorie plan"],
-      ["assets/screens/bulkbro-log.png", "BulkBro meal logging screen"],
-      ["assets/screens/bulkbro-progress.png", "BulkBro progress and weight trend"]
+      ["assets/screens/bulkbro-today.png", "Bulk Tracker daily calorie plan"],
+      ["assets/screens/bulkbro-log.png", "Bulk Tracker meal logging screen"],
+      ["assets/screens/bulkbro-progress.png", "Bulk Tracker progress and weight trend"]
     ],
-    note: "Built for intentional weight gain. BulkBro is not medical advice or a replacement for professional care.",
+    note: "Built for intentional weight gain. Bulk Tracker is not medical advice or a replacement for professional care.",
     icon: "assets/bulkbro.png",
     store: "https://apps.apple.com/app/id6770476671",
     privacy: "apps/bulkbro/privacy.html",
     terms: "apps/bulkbro/terms.html",
     health: "apps/bulkbro/health.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=Bulk%20Tracker%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=Bulk%20Tracker%3A%20Gain%20Weight%20Plan%20Support"
   },
   migraloom: {
-    title: "MigraLoom",
-    kicker: "Private migraine journal",
+    title: "MigraLoom: Migraine Tracker",
+    kicker: "A clearer migraine record",
     description: "A calm, private migraine journal for capturing episodes, understanding recorded patterns, and preparing clearer conversations with healthcare professionals.",
     ideaTitle: "Remember less. Bring a clearer record.",
     idea: "Migraine days make detailed note-taking difficult, and important context is easy to forget later. MigraLoom makes the first entry fast, then lets users add detail when they are ready and turn the record into something useful.",
@@ -90,11 +90,11 @@ const apps = {
     store: "https://apps.apple.com/app/id6811065580",
     privacy: "apps/migraloom/privacy.html",
     terms: "apps/migraloom/terms.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=MigraLoom%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=MigraLoom%3A%20Migraine%20Tracker%20Support"
   },
   bumpecho: {
-    title: "Bump Echo",
-    kicker: "Pregnancy audio keepsakes",
+    title: "Baby Heartbeat - Bump Echo",
+    kicker: "Fetal Heart Sound Recorder",
     description: "A private Soundbook for capturing messages, songs, voices, and quiet moments throughout pregnancy.",
     ideaTitle: "Keep the sounds of this chapter.",
     idea: "Pregnancy is filled with small moments that photographs cannot hold. Bump Echo gives expecting families a gentle place to record those voices and sounds, add the story behind them, and replay the memories later.",
@@ -113,7 +113,7 @@ const apps = {
     store: null,
     privacy: "apps/bumpecho/privacy.html",
     terms: "apps/bumpecho/terms.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=Bump%20Echo%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=Baby%20Heartbeat%20-%20Bump%20Echo%20Support"
   }
 };
 
