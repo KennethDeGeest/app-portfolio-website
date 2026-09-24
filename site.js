@@ -1,8 +1,8 @@
 const apps = {
   treeidentifier: {
-    title: "Tree, Leaf & Wood Identifier",
-    kicker: "Private nature discoveries",
-    description: "Identify trees, plants, leaves, bark, and wood from a photo, ask follow-up questions, and build a private map of what you find.",
+    title: "AI Plant Identifier: Tree Leaf",
+    kicker: "Wood & Flower Identification",
+    description: "Identify trees, plants, leaves, flowers, bark, and wood from a photo, ask follow-up questions, and build a private map of what you find.",
     ideaTitle: "Turn a passing find into something you know.",
     idea: "A curious moment outdoors should not end with a name. Each photo becomes a useful discovery with recognition clues, follow-up questions, personal notes, and a place in a private field collection.",
     features: [
@@ -11,7 +11,7 @@ const apps = {
       ["Build a private field record", "Search and filter saved finds, mark favorites, add notes, and explore hundreds of private pins on a clustered map."]
     ],
     screenshots: [
-      ["assets/screens/treeidentifier-home.png", "Tree, Leaf and Wood Identifier home with a populated collection and private map"],
+      ["assets/screens/treeidentifier-home.png", "AI Plant Identifier home with a populated collection and private map"],
       ["assets/screens/treeidentifier-map.png", "Private discovery map with 257 clustered pins across 14 countries"],
       ["assets/screens/treeidentifier-discovery.png", "Detailed Scots pine discovery with identification details and follow-up photo options"]
     ],
@@ -20,7 +20,7 @@ const apps = {
     store: null,
     privacy: "apps/treeidentifier/privacy.html",
     terms: "apps/treeidentifier/terms.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=Tree%2C%20Leaf%20%26%20Wood%20Identifier%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%20Support"
   },
   tiphaven: {
     title: "TipHaven",
