@@ -1,4 +1,27 @@
 const apps = {
+  treeidentifier: {
+    title: "Tree, Leaf & Wood Identifier",
+    kicker: "Private nature discoveries",
+    description: "Identify trees, plants, leaves, bark, and wood from a photo, ask follow-up questions, and build a private map of what you find.",
+    ideaTitle: "Turn a passing find into something you know.",
+    idea: "A curious moment outdoors should not end with a name. Each photo becomes a useful discovery with recognition clues, follow-up questions, personal notes, and a place in a private field collection.",
+    features: [
+      ["Identify more than leaves", "Use photos of whole trees, leaves, flowers, bark, grain, or cut wood, then add closer views to improve the discovery."],
+      ["Keep exploring with AI", "Ask questions from each result and keep useful answers alongside the species, recognition details, and source material."],
+      ["Build a private field record", "Search and filter saved finds, mark favorites, add notes, and explore hundreds of private pins on a clustered map."]
+    ],
+    screenshots: [
+      ["assets/screens/treeidentifier-home.png", "Tree, Leaf and Wood Identifier home with a populated collection and private map"],
+      ["assets/screens/treeidentifier-map.png", "Private discovery map with 257 clustered pins across 14 countries"],
+      ["assets/screens/treeidentifier-discovery.png", "Detailed Scots pine discovery with identification details and follow-up photo options"]
+    ],
+    note: "AI-assisted identifications are suggestions, not professional safety advice. Collections, notes, and precise pins stay on the user’s iPhone.",
+    icon: "assets/treeidentifier.png",
+    store: null,
+    privacy: "apps/treeidentifier/privacy.html",
+    terms: "apps/treeidentifier/terms.html",
+    support: "mailto:degeestkenneth@gmail.com?subject=Tree%2C%20Leaf%20%26%20Wood%20Identifier%20Support"
+  },
   tiphaven: {
     title: "TipHaven",
     kicker: "Tips, shifts & earnings",
