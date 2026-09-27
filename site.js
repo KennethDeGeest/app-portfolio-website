@@ -110,7 +110,7 @@ const apps = {
     ],
     note: "An audio keepsake—not a fetal-heartbeat recorder or medical monitor. Recordings and personal notes stay on the user’s iPhone.",
     icon: "assets/bumpecho.png",
-    store: null,
+    store: "https://apps.apple.com/app/id6812684414",
     privacy: "apps/bumpecho/privacy.html",
     terms: "apps/bumpecho/terms.html",
     support: "mailto:degeestkenneth@gmail.com?subject=Baby%20Heartbeat%20-%20Bump%20Echo%20Support"
