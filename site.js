@@ -1,7 +1,7 @@
 const apps = {
   treeidentifier: {
-    title: "AI Plant Identifier: Tree Leaf",
-    kicker: "Wood & Flower Identification",
+    title: "AI Plant Identifier: Oqvi",
+    kicker: "Tree, Leaf, Wood & Flower ID",
     description: "Identify trees, plants, leaves, flowers, bark, and wood from a photo, ask follow-up questions, and build a private map of what you find.",
     ideaTitle: "Turn a passing find into something you know.",
     idea: "A curious moment outdoors should not end with a name. Each photo becomes a useful discovery with recognition clues, follow-up questions, personal notes, and a place in a private field collection.",
