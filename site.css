@@ -114,6 +114,7 @@ footer p { margin: 0; }
 .app-case-header { display: grid; grid-template-columns: 7rem minmax(0, 1fr); align-items: start; gap: 1.8rem; max-width: 49rem; }
 .dialog-icon { width: 7rem; height: 7rem; border-radius: 22%; box-shadow: 0 15px 30px rgba(0,0,0,.14); }
 .dialog-kicker { margin-bottom: .5rem; }
+.dialog-subtitle { margin: .6rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.45; }
 .dialog-content h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.055em; }
 .dialog-description { color: var(--muted); line-height: 1.65; margin: .8rem 0 1.35rem; max-width: 38rem; }
 .app-showcase { margin: 3rem -3.5rem 0; overflow: hidden; background: linear-gradient(145deg, #f4f4f5, #e9e9eb); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }

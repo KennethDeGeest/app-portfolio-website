@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#fafafa">
   <title>Kenneth M. S. De Geest — App Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23111111'/%3E%3Cpath d='M18 14v36h8V36l12 14h10L32 31l15-17H37L26 28V14z' fill='white'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="site.css?v=20260916-2">
+  <link rel="stylesheet" href="site.css?v=20261008-1">
 </head>
 <body>
   <a class="skip-link" href="#apps">Skip to apps</a>
@@ -68,8 +68,10 @@
       <header class="app-case-header">
         <img class="dialog-icon" id="dialog-icon" alt="">
         <div class="app-case-copy">
-          <p class="dialog-kicker" id="dialog-kicker"></p>
-          <h2 id="dialog-title"></h2>
+          <div class="app-case-heading">
+            <h2 id="dialog-title"></h2>
+            <p class="dialog-subtitle" id="dialog-kicker"></p>
+          </div>
           <p class="dialog-description" id="dialog-description"></p>
           <a class="button dark" id="dialog-store" href="#">View on the App Store <span aria-hidden="true">↗</span></a>
         </div>
@@ -116,20 +118,20 @@
       <h2 id="contact-dialog-title">What would you like to discuss?</h2>
       <p class="contact-dialog-intro">Choose a topic so your message reaches me with the right context.</p>
       <div class="contact-options">
-        <a href="mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20AI%20Plant%20Identifier%3A%20Tree%20Leaf.%0A%0A">
-          <span><strong>Oqvi</strong><small>Questions, feedback, or support</small></span><b aria-hidden="true">↗</b>
+        <a data-contact-app="treeidentifier" href="mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%3A%20Oqvi%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20AI%20Plant%20Identifier%3A%20Oqvi.%0A%0A">
+          <span><strong>AI Plant Identifier: Oqvi</strong><small>Tree, Leaf, Wood &amp; Flower ID</small></span><b aria-hidden="true">↗</b>
         </a>
-        <a href="mailto:degeestkenneth@gmail.com?subject=Tip%20Tracker%3A%20TipHaven%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Tip%20Tracker%3A%20TipHaven.%0A%0A">
-          <span><strong>Tip Tracker: TipHaven</strong><small>Questions, feedback, or support</small></span><b aria-hidden="true">↗</b>
+        <a data-contact-app="tiphaven" href="mailto:degeestkenneth@gmail.com?subject=Tip%20Tracker%3A%20TipHaven%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Tip%20Tracker%3A%20TipHaven.%0A%0A">
+          <span><strong>Tip Tracker: TipHaven</strong><small>Server Tip Tracker</small></span><b aria-hidden="true">↗</b>
         </a>
-        <a href="mailto:degeestkenneth@gmail.com?subject=Bulk%20Tracker%3A%20Gain%20Weight%20Plan%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Bulk%20Tracker%3A%20Gain%20Weight%20Plan.%0A%0A">
-          <span><strong>Bulk Tracker: Gain Weight Plan</strong><small>Questions, feedback, or support</small></span><b aria-hidden="true">↗</b>
+        <a data-contact-app="bulkbro" href="mailto:degeestkenneth@gmail.com?subject=Bulk%20Tracker%3A%20Gain%20Weight%20Plan%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Bulk%20Tracker%3A%20Gain%20Weight%20Plan.%0A%0A">
+          <span><strong>Bulk Tracker: Gain Weight Plan</strong><small>Adaptive Calorie &amp; Macro Goals</small></span><b aria-hidden="true">↗</b>
         </a>
-        <a href="mailto:degeestkenneth@gmail.com?subject=MigraLoom%3A%20Migraine%20Tracker%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20MigraLoom%3A%20Migraine%20Tracker.%0A%0A">
-          <span><strong>MigraLoom: Migraine Tracker</strong><small>Questions, feedback, or support</small></span><b aria-hidden="true">↗</b>
+        <a data-contact-app="migraloom" href="mailto:degeestkenneth@gmail.com?subject=MigraLoom%3A%20Migraine%20Tracker%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20MigraLoom%3A%20Migraine%20Tracker.%0A%0A">
+          <span><strong>MigraLoom: Migraine Tracker</strong><small>A clearer migraine record</small></span><b aria-hidden="true">↗</b>
         </a>
-        <a href="mailto:degeestkenneth@gmail.com?subject=Baby%20Heartbeat%20-%20Bump%20Echo%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Baby%20Heartbeat%20-%20Bump%20Echo.%0A%0A">
-          <span><strong>Baby Heartbeat - Bump Echo</strong><small>Questions, feedback, or support</small></span><b aria-hidden="true">↗</b>
+        <a data-contact-app="bumpecho" href="mailto:degeestkenneth@gmail.com?subject=Baby%20Heartbeat%20-%20Bump%20Echo%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Baby%20Heartbeat%20-%20Bump%20Echo.%0A%0A">
+          <span><strong>Baby Heartbeat - Bump Echo</strong><small>Pregnancy Sound Recorder</small></span><b aria-hidden="true">↗</b>
         </a>
         <a class="hire-option" href="mailto:degeestkenneth@gmail.com?subject=App%20Project%20Enquiry&amp;body=Hi%20Kenneth%2C%0A%0AI%27d%20like%20to%20discuss%20an%20app%20project.%0A%0AProject%20idea%3A%0ATimeline%3A%0ABudget%20range%3A%0A">
           <span><strong>Hire me for an app project</strong><small>Building, improving, or launching an app</small></span><b aria-hidden="true">↗</b>
@@ -141,6 +143,6 @@
     </div>
   </dialog>
 
-  <script src="site.js?v=20261006-1"></script>
+  <script src="site.js?v=20261008-1"></script>
 </body>
 </html>
