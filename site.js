@@ -20,7 +20,7 @@ const apps = {
     store: null,
     privacy: "apps/treeidentifier/privacy.html",
     terms: "apps/treeidentifier/terms.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%3A%20Oqvi%20Support"
   },
   tiphaven: {
     title: "Tip Tracker: TipHaven",
@@ -94,7 +94,7 @@ const apps = {
   },
   bumpecho: {
     title: "Baby Heartbeat - Bump Echo",
-    kicker: "Fetal Heart Sound Recorder",
+    kicker: "Pregnancy Sound Recorder",
     description: "A private Soundbook for capturing messages, songs, voices, and quiet moments throughout pregnancy.",
     ideaTitle: "Keep the sounds of this chapter.",
     idea: "Pregnancy is filled with small moments that photographs cannot hold. Bump Echo gives expecting families a gentle place to record those voices and sounds, add the story behind them, and replay the memories later.",
@@ -116,6 +116,15 @@ const apps = {
     support: "mailto:degeestkenneth@gmail.com?subject=Baby%20Heartbeat%20-%20Bump%20Echo%20Support"
   }
 };
+
+// Keep contact labels and email context aligned with the US App Store metadata above.
+document.querySelectorAll("[data-contact-app]").forEach(link => {
+  const app = apps[link.dataset.contactApp];
+  if (!app) return;
+  link.querySelector("strong").textContent = app.title;
+  link.querySelector("small").textContent = app.kicker;
+  link.href = `${app.support}&body=${encodeURIComponent(`Hi Kenneth,\n\nI'm contacting you about ${app.title}.\n\n`)}`;
+});
 
 const dialog = document.querySelector("#app-dialog");
 const closeButton = dialog.querySelector(".dialog-close");
