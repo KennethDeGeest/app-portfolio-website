@@ -81,11 +81,11 @@ const apps = {
       ["Prepare for appointments", "Create a structured visit summary and export a PDF only when the user chooses to share it." ]
     ],
     screenshots: [
-      ["assets/screens/migraloom-home.png", "MigraLoom home and episode overview"],
-      ["assets/screens/migraloom-patterns.png", "MigraLoom recorded patterns"],
-      ["assets/screens/migraloom-visit.png", "MigraLoom visit summary"]
+      ["assets/screens/migraloom-home.png?v=20261011", "MigraLoom Log screen with sample episodes"],
+      ["assets/screens/migraloom-patterns.png?v=20261011", "MigraLoom Patterns screen with sample records"],
+      ["assets/screens/migraloom-visit.png?v=20261011", "MigraLoom Reports screen with sample records"]
     ],
-    note: "No MigraLoom account required. Journal and health details remain stored on the user’s iPhone.",
+    note: "No account required. The first five episodes are free; one payment unlocks further recording. Journal data is stored on your iPhone and may be included in Apple device backups. Optional diagnostics are off by default. Screenshots use sample records.",
     icon: "assets/migraloom.png",
     store: "https://apps.apple.com/app/id6811065580",
     privacy: "apps/migraloom/privacy.html",
@@ -221,6 +221,9 @@ async function showLegal(type, updateHash = true) {
     const content = parsed.querySelector("main");
     if (!content) throw new Error("Document content unavailable");
     content.querySelectorAll("nav, footer, script, style").forEach(element => element.remove());
+    content.querySelectorAll("a[href]").forEach(link => {
+      link.href = new URL(link.getAttribute("href"), new URL(source, location.href)).href;
+    });
     legalDocument.replaceChildren(...Array.from(content.childNodes).map(node => node.cloneNode(true)));
   } catch (error) {
     legalDocument.innerHTML = "<h1>Document unavailable</h1><p>Please try again after the page has been published.</p>";
