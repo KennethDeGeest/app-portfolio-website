@@ -25,21 +25,21 @@ const apps = {
   tiphaven: {
     title: "Tip Tracker: TipHaven",
     kicker: "Server Tip Tracker",
-    description: "A private shift tracker that turns tips, wages, hours, and tip-outs into a clear picture of what your time is worth.",
-    ideaTitle: "Know which shifts truly pay off.",
-    idea: "Hospitality workers often remember the cash in their pocket, but not the full value of a shift. TipHaven brings every part of the working day together so earnings, patterns, and progress are easy to understand.",
+    description: "A bright, private tip tracker that puts total tips, hourly earnings, and hours worked in one clear view.",
+    ideaTitle: "Your work. Your worth.",
+    idea: "TipHaven makes the outcome immediate: what you earned, how much came from tips, and which shifts paid best. The playful card system keeps detailed records easy to scan without making the app feel like accounting software.",
     features: [
+      ["See tips first", "View total tips beside earnings per hour and hours worked, then understand the full shift at a glance."],
       ["Capture the full shift", "Log hours, wages, cash and card tips, sales, and tip-outs in one quick flow."],
-      ["See the real hourly value", "Automatically calculate total earnings and effective hourly pay across shifts, roles, and workplaces."],
-      ["Find useful patterns", "Review trends and comparisons without turning personal work records into a public profile."]
+      ["Find useful patterns", "Compare shifts, roles, and workplaces while keeping personal work records on your iPhone."]
     ],
     screenshots: [
-      ["assets/screens/tiphaven-today.png", "TipHaven today view with weekly earnings"],
-      ["assets/screens/tiphaven-shift.png", "TipHaven shift entry flow"],
-      ["assets/screens/tiphaven-insights.png", "TipHaven earnings insights"]
+      ["assets/screens/tiphaven-today.png?v=20261014-2", "TipHaven today view with tips, hourly earnings, and hours worked"],
+      ["assets/screens/tiphaven-shift.png?v=20261014-2", "TipHaven shift entry flow"],
+      ["assets/screens/tiphaven-insights.png?v=20261014-2", "TipHaven earnings insights"]
     ],
-    note: "No account required. Shift and earnings details stay on the user’s iPhone.",
-    icon: "assets/tiphaven.png",
+    note: "No account required. All features are available from the start, the first five shift entries are free, and one lifetime purchase unlocks unlimited shift logging. Shift and earnings details stay on the user’s iPhone.",
+    icon: "assets/tiphaven.png?v=20261014-2",
     store: "https://apps.apple.com/app/id6805177188",
     privacy: "apps/tiphaven/privacy.html",
     terms: "apps/tiphaven/terms.html",
