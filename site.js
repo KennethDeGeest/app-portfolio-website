@@ -70,8 +70,8 @@ const apps = {
     support: "mailto:degeestkenneth@gmail.com?subject=Bulk%20Tracker%3A%20Gain%20Weight%20Plan%20Support"
   },
   migraloom: {
-    title: "MigraLoom: Migraine Tracker",
-    kicker: "A clearer migraine record",
+    title: "Headache Tracker: MigraLoom",
+    kicker: "Migraine Diary & Symptom Log",
     description: "A calm, private migraine journal for capturing episodes, understanding recorded patterns, and preparing clearer conversations with healthcare professionals.",
     ideaTitle: "Remember less. Bring a clearer record.",
     idea: "Migraine days make detailed note-taking difficult, and important context is easy to forget later. MigraLoom makes the first entry fast, then lets users add detail when they are ready and turn the record into something useful.",
@@ -90,7 +90,7 @@ const apps = {
     store: "https://apps.apple.com/app/id6811065580",
     privacy: "apps/migraloom/privacy.html",
     terms: "apps/migraloom/terms.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=MigraLoom%3A%20Migraine%20Tracker%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=Headache%20Tracker%3A%20MigraLoom%20Support"
   },
   bumpecho: {
     title: "Baby Heartbeat - Bump Echo",
