@@ -17,7 +17,7 @@ const apps = {
     ],
     note: "AI-assisted identifications are suggestions, not professional safety advice. Collections, notes, and precise pins stay on the user’s iPhone.",
     icon: "assets/treeidentifier.png",
-    store: null,
+    store: "https://apps.apple.com/app/id6815273355",
     privacy: "apps/treeidentifier/privacy.html",
     terms: "apps/treeidentifier/terms.html",
     support: "mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%3A%20Oqvi%20Support"
