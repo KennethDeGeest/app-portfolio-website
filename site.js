@@ -1,4 +1,45 @@
 const apps = {
+  fovri: {
+    "title": "Fovri",
+    "kicker": "Recipes, meals & groceries",
+    "description": "Turn recipe links and cooking videos into a personal cookbook, then plan what to cook and what to buy.",
+    "ideaTitle": "From saved inspiration to your next good meal.",
+    "idea": "A recipe should be easy to find when you are ready to cook. Fovri brings shared links, editable recipes, meal plans and groceries together in one calm place.",
+    "features": [
+        [
+            "Bring recipes into your cookbook",
+            "Share a recipe link to Fovri or paste it in the app. Review and edit the ingredients and steps; optional AI help can recover missing details or create a labelled suggestion from a video."
+        ],
+        [
+            "Plan meals and groceries",
+            "Choose what to cook next and bring the ingredients into a grocery list you can check off as you shop."
+        ],
+        [
+            "Cook at your own pace",
+            "Adjust servings, follow the steps and use cooking timers while keeping the original source within reach."
+        ]
+    ],
+    "screenshots": [
+        [
+            "assets/screens/fovri-cook-next.png",
+            "Fovri Cook next screen with a sample pasta meal"
+        ],
+        [
+            "assets/screens/fovri-recipe.png",
+            "An editable sample recipe in Fovri"
+        ],
+        [
+            "assets/screens/fovri-groceries.png",
+            "Fovri grocery checklist with sample ingredients"
+        ]
+    ],
+    "note": "Coming soon for iPhone. Five successful recipe imports are free; Fovri Pro offers monthly and yearly subscriptions for further imports. Saved recipes remain available without a subscription. Screenshots show sample content.",
+    "icon": "assets/fovri.png",
+    "store": null,
+    "privacy": "apps/fovri/privacy.html",
+    "terms": "apps/fovri/terms.html",
+    "support": "mailto:degeestkenneth@gmail.com?subject=Fovri%20Support"
+},
   treeidentifier: {
     title: "AI Plant Identifier: Oqvi",
     kicker: "Tree, Leaf, Wood & Flower ID",
