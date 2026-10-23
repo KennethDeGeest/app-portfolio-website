@@ -1,7 +1,7 @@
 const apps = {
   fovri: {
-    "title": "Fovri",
-    "kicker": "Recipes, meals & groceries",
+    "title": "Recipe Keeper & Planner: Fovri",
+    "kicker": "Social Import & Cookbook",
     "description": "Turn recipe links and cooking videos into a personal cookbook, then plan what to cook and what to buy.",
     "ideaTitle": "From saved inspiration to your next good meal.",
     "idea": "A recipe should be easy to find when you are ready to cook. Fovri brings shared links, editable recipes, meal plans and groceries together in one calm place.",
@@ -33,12 +33,12 @@ const apps = {
             "Fovri grocery checklist with sample ingredients"
         ]
     ],
-    "note": "Coming soon for iPhone. Five successful recipe imports are free; Fovri Pro offers monthly and yearly subscriptions for further imports. Saved recipes remain available without a subscription. Screenshots show sample content.",
+    "note": "Available on the App Store. Five successful recipe imports are free; Fovri Pro offers monthly and yearly subscriptions for further imports. Saved recipes remain available without a subscription. Screenshots show sample content.",
     "icon": "assets/fovri.png",
-    "store": null,
+    "store": "https://apps.apple.com/app/id6824272880",
     "privacy": "apps/fovri/privacy.html",
     "terms": "apps/fovri/terms.html",
-    "support": "mailto:degeestkenneth@gmail.com?subject=Fovri%20Support"
+    "support": "mailto:degeestkenneth@gmail.com?subject=Recipe%20Keeper%20%26%20Planner%3A%20Fovri%20Support"
 },
   treeidentifier: {
     title: "AI Plant Identifier: Oqvi",
