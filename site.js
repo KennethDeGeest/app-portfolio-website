@@ -64,8 +64,8 @@ const apps = {
     support: "mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%3A%20Oqvi%20Support"
   },
   tiphaven: {
-    title: "Tip Tracker: TipHaven",
-    kicker: "Server Tip Tracker",
+    title: "Server Tip Tracker: TipHaven",
+    kicker: "Waitress Bartender Income Log",
     description: "A private shift tracker that turns tips, wages, hours, and tip-outs into a clear picture of what your time is worth.",
     ideaTitle: "Know which shifts truly pay off.",
     idea: "Hospitality workers often remember the cash in their pocket, but not the full value of a shift. TipHaven brings every part of the working day together so earnings, patterns, and progress are easy to understand.",
@@ -84,7 +84,7 @@ const apps = {
     store: "https://apps.apple.com/app/id6805177188",
     privacy: "apps/tiphaven/privacy.html",
     terms: "apps/tiphaven/terms.html",
-    support: "mailto:degeestkenneth@gmail.com?subject=Tip%20Tracker%3A%20TipHaven%20Support"
+    support: "mailto:degeestkenneth@gmail.com?subject=Server%20Tip%20Tracker%3A%20TipHaven%20Support"
   },
   bulkbro: {
     title: "Bulk Tracker: Gain Weight Plan",
