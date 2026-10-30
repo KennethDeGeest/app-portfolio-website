@@ -1,4 +1,27 @@
 const apps = {
+  walkbop: {
+    title: "WalkBop",
+    kicker: "Weekly Step Races With Friends",
+    description: "Turn everyday walking into a weekly race with friends, playful rivalries, surprise items, and a racer that reacts to every twist.",
+    ideaTitle: "Make ordinary steps feel worth chasing.",
+    idea: "Step goals are easy to ignore when they feel solitary. WalkBop turns the walking you already do into a shared weekly contest where every gap, overtake, item, and comeback gives you a reason to move again.",
+    features: [
+      ["Race with real steps", "Connect Apple Health and turn your weekly step total into a live score, position, and distance from the friends around you."],
+      ["Change the race with items", "Earn mystery crates by walking, then use playful items to attack, defend, or boost at the moment that matters."],
+      ["Build a rivalry that resets every week", "Invite friends, follow the chase, see your racer react, and begin a fresh story when the next weekly race starts."]
+    ],
+    screenshots: [
+      ["assets/screens/walkbop-race.png?v=20261030", "WalkBop weekly race showing the player between friends in the chase"],
+      ["assets/screens/walkbop-items.png?v=20261030", "WalkBop item inventory with mystery crates, attacks, and shields"],
+      ["assets/screens/walkbop-character.png?v=20261030", "WalkBop racer creator with character customization choices"]
+    ],
+    note: "Apple Health access is optional but required to use real walking steps in a live race. WalkBop shares weekly race totals with participating friends, not individual Health samples.",
+    icon: "assets/walkbop.png?v=20261030",
+    store: "https://apps.apple.com/app/id6828370811",
+    privacy: "apps/walkbop/privacy.html",
+    terms: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+    support: "mailto:degeestkenneth@gmail.com?subject=WalkBop%20Support"
+  },
   fovri: {
     "title": "Recipe Keeper & Planner: Fovri",
     "kicker": "Social Import & Cookbook",
