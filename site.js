@@ -19,8 +19,9 @@ const apps = {
     icon: "assets/walkbop.png?v=20261030",
     store: "https://apps.apple.com/app/id6828370811",
     privacy: "apps/walkbop/privacy.html",
-    terms: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
-    support: "mailto:degeestkenneth@gmail.com?subject=WalkBop%20Support"
+    terms: "apps/walkbop/terms.html",
+    support: "apps/walkbop/support.html",
+    supportEmail: "mailto:degeestkenneth@gmail.com?subject=WalkBop%20Support"
   },
   fovri: {
     "title": "Recipe Keeper & Planner: Fovri",
@@ -187,7 +188,8 @@ document.querySelectorAll("[data-contact-app]").forEach(link => {
   if (!app) return;
   link.querySelector("strong").textContent = app.title;
   link.querySelector("small").textContent = app.kicker;
-  link.href = `${app.support}&body=${encodeURIComponent(`Hi Kenneth,\n\nI'm contacting you about ${app.title}.\n\n`)}`;
+  const supportEmail = app.supportEmail || app.support;
+  link.href = `${supportEmail}&body=${encodeURIComponent(`Hi Kenneth,\n\nI'm contacting you about ${app.title}.\n\n`)}`;
 });
 
 const dialog = document.querySelector("#app-dialog");
@@ -323,6 +325,8 @@ function closeContactDialog() {
 
 contactTrigger.addEventListener("click", () => contactDialog.showModal());
 dialogSupport.addEventListener("click", (event) => {
+  const supportDestination = apps[currentAppId]?.support || "";
+  if (!supportDestination.startsWith("mailto:")) return;
   event.preventDefault();
   closeDialog();
   contactDialog.showModal();
